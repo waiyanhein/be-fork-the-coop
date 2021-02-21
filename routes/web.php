@@ -14,7 +14,3 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('testing', function () {
-   return \App\Services\AuthDeviceService::check();
-});
