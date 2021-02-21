@@ -13,7 +13,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f276d875-594b-4f72-bf20-9ffcb25ea531" name="Default Changelist" comment="" />
+    <list default="true" id="f276d875-594b-4f72-bf20-9ffcb25ea531" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,9 +133,15 @@
     <property name="DatabaseDriversLRU" value="mysql&#10;mariadb" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LaravelProjects/PatheinDirectory" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.ebextensions" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="terminal" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Acer\Desktop\ForkMyanCoop\.ebextensions" />
+      <recent name="C:\Users\Acer\Desktop\ForkMyanCoop" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -153,7 +163,7 @@
       <workItem from="1613870289893" duration="4094000" />
       <workItem from="1613911857049" duration="3284000" />
       <workItem from="1613927308077" duration="560000" />
-      <workItem from="1613932773118" duration="4343000" />
+      <workItem from="1613932773118" duration="10080000" />
     </task>
     <servers />
   </component>
@@ -180,6 +190,10 @@
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state x="1918" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1613851460166" />
+    <state x="1963" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1613940476074">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1963" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1613940476074" />
     <state x="2086" y="100" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1613853615449">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
