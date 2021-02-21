@@ -20,3 +20,7 @@ Route::middleware('auth.device')->put('/device/update-location', 'Auth\RegisterD
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('testing', function () {
+    return "Testing route";
+});
