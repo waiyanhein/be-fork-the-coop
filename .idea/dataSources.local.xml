@@ -7,5 +7,11 @@
       <user-name>coup</user-name>
       <schema-mapping />
     </data-source>
+    <data-source name="fork_the_coop_test@fork-the-coop-test.chf7qpxsfjde.eu-west-2.rds.amazonaws.com" uuid="f7230288-85b8-49ee-ac82-4a28fba23926">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MARIADB" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>admin</user-name>
+      <schema-mapping />
+    </data-source>
   </component>
 </project>

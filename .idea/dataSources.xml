@@ -7,5 +7,11 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:33060/coup</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="fork_the_coop_test@fork-the-coop-test.chf7qpxsfjde.eu-west-2.rds.amazonaws.com" uuid="f7230288-85b8-49ee-ac82-4a28fba23926">
+      <driver-ref>mariadb</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mariadb://fork-the-coop-test.chf7qpxsfjde.eu-west-2.rds.amazonaws.com:3306/fork_the_coop_test</jdbc-url>
+    </data-source>
   </component>
 </project>
