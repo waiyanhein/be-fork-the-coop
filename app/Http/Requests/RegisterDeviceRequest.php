@@ -32,7 +32,7 @@ class RegisterDeviceRequest extends FormRequest
             'nickname' => [  ],
             'device_id' => [ 'required' ],
             'os' => [ 'required', Rule::in(array_keys(ClientDevice::getSupportedOsList())) ],
-            'phone_number' => [ 'required', new UniqueDevicePhoneNumber($this->get('device_id')) ],
+            'phone_number' => [ 'required', ],// @TODO: remove this. If already registered, login
             'latitude' => [ 'required', 'numeric' ],
             'longitude' => [ 'required', 'numeric' ]
         ];
@@ -40,6 +40,12 @@ class RegisterDeviceRequest extends FormRequest
 
     public function persist(): ClientDevice
     {
+        // login if already registered
+        $device = ClientDevice::where('device_id', $this->get('device_id'))
+            ->where('phone_number', $this->get('phone_number'))->first();
+        if ($device) {
+            return $device;
+        }
         //@TODO: for now it is generating the token straight away
         //@TODO: in the future generate the token when the device or number has been verified.
         $device = new ClientDevice();

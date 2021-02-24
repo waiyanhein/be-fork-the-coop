@@ -14,10 +14,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f276d875-594b-4f72-bf20-9ffcb25ea531" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/RegisterDeviceRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/RegisterDeviceRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +164,8 @@
       <workItem from="1613870289893" duration="4094000" />
       <workItem from="1613911857049" duration="3284000" />
       <workItem from="1613927308077" duration="560000" />
-      <workItem from="1613932773118" duration="13264000" />
+      <workItem from="1613932773118" duration="14557000" />
+      <workItem from="1614179295175" duration="4964000" />
     </task>
     <servers />
   </component>
@@ -187,10 +188,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1918" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613949308586">
+    <state x="1902" y="165" key="#SSH_Configurations" timestamp="1614179653678">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state x="1918" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1613949308586" />
+    <state x="1902" y="165" key="#SSH_Configurations/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1614179653678" />
+    <state x="1918" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614179655144">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1918" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1614179655144" />
     <state x="1963" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1613940476074">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
@@ -203,10 +208,10 @@
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state x="2056" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1613943689297" />
-    <state x="2106" y="261" key="FileChooserDialogImpl" timestamp="1613851500017">
+    <state x="2106" y="261" key="FileChooserDialogImpl" timestamp="1614179651494">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state x="2106" y="261" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1613851500017" />
+    <state x="2106" y="261" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1614179651494" />
     <state width="286" height="456" key="HiddenNamespacesPopup" timestamp="1613949333849">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
@@ -227,9 +232,9 @@
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state x="1982" y="240" key="run.anything.popup/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1613871282663" />
-    <state x="1991" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1613949368078">
+    <state x="1991" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1614183564982">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state x="1991" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1613949368078" />
+    <state x="1991" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1614183564982" />
   </component>
 </project>

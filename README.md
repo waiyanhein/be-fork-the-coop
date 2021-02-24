@@ -14,3 +14,9 @@ Activate the virtual environment with this command to run EB commands - ~\eb-ve\
 - cp ForkTheCoopPem.pem ~/.ssh/
 - chmod 0400 ~/.ssh/ForkTheCoopPem.pem
 - ssh -i "ForkTheCoopPem.pem" ec2-user@ec2-35-178-168-145.eu-west-2.compute.amazonaws.com
+
+## Docker note
+Deleting all the images.
+- docker rmi -f $(docker images -a -q)
+Removing docker volume
+- docker volume rm -f fork-data
