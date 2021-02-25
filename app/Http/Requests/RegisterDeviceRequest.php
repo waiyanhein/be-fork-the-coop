@@ -44,6 +44,10 @@ class RegisterDeviceRequest extends FormRequest
         $device = ClientDevice::where('device_id', $this->get('device_id'))
             ->where('phone_number', $this->get('phone_number'))->first();
         if ($device) {
+            // refresh the token
+            $device->token = ClientDevice::generateDeviceToken();
+            $device->save();
+
             return $device;
         }
         //@TODO: for now it is generating the token straight away
@@ -60,7 +64,7 @@ class RegisterDeviceRequest extends FormRequest
         $device->token = ClientDevice::generateDeviceToken();
         $device->save();
 
-        //@TODO: run this in the background Q
+        //@TODO: run thiwebs in the background Q
         // after registering the device. Configure the receiver devices
         $this->registerReceiversFor($device);
 

@@ -20,7 +20,13 @@ class DevicesSeeder extends Seeder
         ]);
         factory(ClientDevice::class, 15)->create([
             'latitude' => 51.5870615,
-            'longitude' => -0.1645405
+            'longitude' => -0.1645405,
+        ]);
+        factory(ClientDevice::class)->create([
+            'latitude' => 51.5970615,
+            'longitude' => -0.1675405,
+            'phone_number' => '09412287904',
+            'device_id' => '4de8626f493e420b'
         ]);
     }
 }
