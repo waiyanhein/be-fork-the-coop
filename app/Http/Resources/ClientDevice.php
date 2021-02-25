@@ -30,6 +30,8 @@ class ClientDevice extends JsonResource
 
         if ($receiverNumbers) {
             $data['receiver_numbers'] = $receiverNumbers;
+        } else {
+            $data['receiver_numbers'] = [ ];
         }
 
         return $data;
