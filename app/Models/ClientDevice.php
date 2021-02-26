@@ -75,6 +75,20 @@ class ClientDevice extends Model
             $uniqueReceiverNumbers[] = $nearestDevice->phone_number;
         }
 
+        //@TODO: also find one number further than 300km
+        $distantDeviceQuery =  ClientDevice::selectRaw('*, ( 6367 * acos( cos( radians( ? ) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians( ? ) ) + sin( radians( ? ) ) * sin( radians( latitude ) ) ) ) AS distance', [$this->latitude, $this->longitude, $this->latitude])
+            ->where('client_devices.phone_number', '!=', $this->phone_number);
+        if ($invalidNumbersForReceivers) {
+            $distantDeviceQuery = $distantDeviceQuery->whereNotIn('phone_number', $invalidNumbersForReceivers);
+        }
+        $distantDevices = $distantDeviceQuery->having('distance', '>', config('app.distant_device_distance_threshold'))//km
+        ->orderBy('distance')->take(1)->get();
+        if (count($distantDevices) > 0) {
+            foreach ($distantDevices as $distantDevice) {
+                $uniqueReceiverNumbers[] = $distantDevice->phone_number;
+            }
+        }
+
         return $uniqueReceiverNumbers;
     }
 }

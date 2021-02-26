@@ -34,9 +34,10 @@ class RegisterDeviceControllerTest extends TestCase
     }
 
     /** @test */
-    public function sameNumberCannotBeRegisteredWithSameDeviceAgain()
+    public function registeringSameNumberWithSameDeviceWillRefreshToken()
     {
         $existingDevice = factory(ClientDevice::class)->create();
+        $oldToken = $existingDevice->token;
 
         $body = [
             'nickname' => $this->faker->name,
@@ -47,14 +48,13 @@ class RegisterDeviceControllerTest extends TestCase
             'longitude' => $this->faker->longitude
         ];
 
-        $this->json('POST', route('api.device.register'), $body)->assertStatus(Response::HTTP_UNPROCESSABLE_ENTITY)
-            ->assertJsonFragment([
-                'phone_number' => [
-                    'Phone number has already been registered on this device.'
-                ]
-            ]);
+        $this->json('POST', route('api.device.register'), $body)->assertSuccessful();
+
+        $existingDevice->refresh();
+        $this->assertNotEquals($oldToken, $existingDevice->token);
     }
 
+    //this also test to include one distant device
     /** @test */
     public function whenDeviceIsRegisteredNearestDevicesWillBeRegisteredAsReceivers()
     {
@@ -63,7 +63,7 @@ class RegisterDeviceControllerTest extends TestCase
             'latitude' => 51.5870615,
             'longitude' => -0.1645405
         ]);
-        // this will not be registered as receiver cause not within the radius
+        // this will not be registered as receiver cause not within the radius. One device might be taken as distant one
         factory(ClientDevice::class, 10)->create([
             'latitude' => 71.5870615,
             'longitude' => -2.1645405
@@ -102,7 +102,7 @@ class RegisterDeviceControllerTest extends TestCase
             ->where('phone_number', $body['phone_number'])
             ->first();
 
-        $this->assertEquals(count($nearestReceiverDevices), $clientDevice->receiverDevices()->count());
+        $this->assertEquals(11, $clientDevice->receiverDevices()->count());
         foreach($nearestReceiverDevices as $nearestReceiverDevice) {
             $this->assertDatabaseHas('receiver_devices', [
                'phone_number' => $nearestReceiverDevice->phone_number,

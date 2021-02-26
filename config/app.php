@@ -137,6 +137,7 @@ return [
     'receivers_per_device' => env('RECEIVERS_PER_DEVICE', 10),
     'nearest_devices_radius' => env('NEAREST_DEVICES_RADIUS', 10), // value is in KM
     'receivers_eligible_limit' => env('RECEIVERS_ELIGIBLE_LIMIT', 5),// one device can be receivers for at most x times
+    'distant_device_distance_threshold' => env('DISTANT_DEVICE_DISTANCE_THRESHOLD', 300), //in KM
 
     'providers' => [
 
@@ -178,6 +179,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        //App\Providers\TelescopeServiceProvider::class,
 
     ],
 

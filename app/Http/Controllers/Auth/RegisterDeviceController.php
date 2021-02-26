@@ -46,6 +46,7 @@ class RegisterDeviceController extends Controller
         } catch (\Exception $e) {
             DB::rollBack();
         }
+        $device->refresh();
 
         return new ClientDeviceResource($device);
     }
